@@ -148,3 +148,23 @@ function same(arr1, arr2) {
 }
 console.log(same([1, 2, 3], [1, 4, 9]));
 console.log(same([1, 5, 3], [9, 4, 9]));
+
+//6.Paliandrome
+//.1
+var isPalindrome = function (x) {
+  if (x < 0) return false;
+  if (x.toString() === x.toString().split("").reverse().join("")) return true;
+  console.log(x.toString());
+  console.log(x.toString().split("").reverse().join(""));
+  return false;
+};
+
+//2.
+var isPalindrome = function (x) {
+  let len = x.length;
+  if (x < 0) return false;
+  for (i = 0; i < len / 2; i++) {
+    if (x[i] !== x[len - 1 - i]) return false;
+  }
+  return true;
+};
