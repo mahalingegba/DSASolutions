@@ -269,3 +269,22 @@ var isValid = function (s) {
 };
 let s = "[({{{}}})]";
 console.log(isValid(s));
+
+//13.Plus one
+function plusOne(digits) {
+  let end = digits.length - 1;
+
+  for (let i = end; i >= 0; i--) {
+    if (digits[i] !== 9) {
+      digits[i] += 1;
+      break;
+    } else {
+      digits[i] = 0;
+    }
+  }
+  if (digits[0] === 0) return digits.unshift(1);
+  return digits;
+}
+
+let digits = [1, 2, 3];
+console.log(plusOne(digits));
